@@ -5,5 +5,5 @@ A linux version of a basic C port scanner that originally written for windows
 
 ### How to compile executable
 ```
-gcc Whatever/you/path/toYourDirectoryIs/CPScan-linux/linux-CPScan.c -o Your/Directory/CPScan-linux/linux-CPScan
+gcc (YourSrcPath)/CPScan-linux/linux-CPScan.c -o (YourDestinationPath)/CPScan-linux/linux-CPScan
 ```
