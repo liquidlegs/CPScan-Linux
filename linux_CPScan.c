@@ -159,11 +159,11 @@ Returns nothing.
 */
 void ResolveDnsAddress(char *dnsQuery, char output[32]) {
     struct hostent *host = NULL;                                // Structure holds the ip address info.
-	struct in_addr **addr = NULL;                               // Structures stores the ip address in its network byte order.
+	struct in_addr **addr = NULL;                           // Structures stores the ip address in its network byte order.
 		
-	host = gethostbyname(dnsQuery);                             // Queries the domain for ip address info.
+	host = gethostbyname(dnsQuery);                         // Queries the domain for ip address info.
     if(host) {
-	    addr = (struct in_addr **)host->h_addr_list;            // Grab the ip address.
+	    addr = (struct in_addr **)host->h_addr_list;        // Grab the ip address.
         strcat(output, inet_ntoa(*addr[0]));                    // Fill the output buffer.
     }
     else {
